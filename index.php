@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Don't Blink</title>	
+<title>Don't Blink</title>
 <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
@@ -43,8 +43,8 @@
 <script src="js/smoother.js"></script>
 <script src="js/objectdetect.js"></script>
 <script src="js/objectdetect.frontalface.js"></script>
-<script src="js/objectdetect.eye.js"></script>  
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="js/objectdetect.eye.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="js/jquery.objectdetect.js"></script>
 <script src="js/timeago.js"></script>
 <script src="//platform.twitter.com/widgets.js"></script>
@@ -56,7 +56,7 @@ $(function() {
 });
 var smoother = new smoother([0.9999, 0.9999, 0.9, 0.9], [0, 0, 0, 0, 0]);
 $(window).load(function() {
-	
+
 	var startTime = new Date().valueOf(),
 		numberWang = 0,
 		imgs = 'img/'+numberWang+'.jpg',
@@ -86,14 +86,14 @@ $(window).load(function() {
 					$(this).objectdetect('all', {classifier: objectdetect.eye, selection: faces[i]}, function(eyes) {
 						if(eyes[0]){
 							for (var j = 0; j < eyes.length; ++j) {}
-						} else {						
+						} else {
 							++numberWang;
 							if(numberWang == 11){
 								var then = moment();
 								$('#timestamp2').attr('data-livestamp', then);
 								var now = $('#timestamp').attr('data-livestamp');
 								var difference = (then - now)/1000;
-								$('#img').html('<h2>I lasted '+difference+' seconds against the Weeping Angels</h2><p><a href="https://twitter.com/intent/tweet?text=I lasted '+difference+' seconds against the Weeping Angels. Can you survive longer?%20&url=http%3A%2F%2Fdont-blink.herokuapp.com&hashtags=dontblink" class="tweet">Tweet your score</a></p><p><a href="#" onclick="location.reload(true); return false;">Try again?</a></p>');	
+								$('#img').html('<h2>I lasted '+difference+' seconds against the Weeping Angels</h2><p><a href="https://twitter.com/intent/tweet?text=I lasted '+difference+' seconds against the Weeping Angels. Can you survive longer?%20&url=http%3A%2F%2Fdont-blink.herokuapp.com&hashtags=dontblink" class="tweet">Tweet your score</a></p><p><a href="#" onclick="location.reload(true); return false;">Try again?</a></p>');
 							}
 							console.log('blink');
 							var imgs = 'img/'+numberWang+'.jpg';
