@@ -93,7 +93,7 @@ $(window).load(function() {
 								$('#timestamp2').attr('data-livestamp', then);
 								var now = $('#timestamp').attr('data-livestamp');
 								var difference = (then - now)/1000;
-								$('#img').html('<h2>I lasted '+difference+' seconds against the Weeping Angels</h2><p><a href="https://twitter.com/intent/tweet?text=I lasted '+difference+' seconds against the Weeping Angels. Can you survive longer?%20&url=http%3A%2F%2Fdont-blink.herokuapp.com&hashtags=dontblink" class="tweet">Tweet your score</a></p><p><a href="#" onclick="location.reload(true); return false;">Try again?</a></p>');
+								$('#img').html('<h2>I lasted '+difference+' seconds against the Weeping Angels</h2><p><a href="https://twitter.com/intent/tweet?text=I lasted '+difference+' seconds against the Weeping Angels. Can you survive longer?%20&url=http%3A%2F%2Fweepingangels.herokuapp.com&hashtags=dontblink" class="tweet">Tweet your score</a></p><p><a href="#" onclick="location.reload(true); return false;">Try again?</a></p>');
 							}
 							console.log('blink');
 							var imgs = 'img/'+numberWang+'.jpg';
